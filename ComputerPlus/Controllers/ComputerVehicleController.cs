@@ -144,11 +144,11 @@ namespace ComputerPlus.Interfaces.ComputerVehDB
             var parts = ownerName.Split(' ');
             while (parts.Length < 2)
             {
-                parts = PersonaHelper.GetRandomFullName().Split(' ');
+                parts = Persona.GetRandomFullName().Split(' ');
             }
             int timesStopped = Globals.Random.Next(0, 4);
-            var persona = new Persona(parts[0], parts[1], Gender.Random, RandomDay());
-
+            var persona = new Persona(ped, Gender.Random, RandomDay(), Globals.Random.Next(0, timesStopped + 1), 
+                parts[0], parts[1], ELicenseState.Valid, timesStopped, false, false, false);
             Functions.SetPersonaForPed(ped, persona);
             return ComputerPlusEntity.CreateFrom(ped);
         }

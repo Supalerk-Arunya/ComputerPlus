@@ -91,6 +91,7 @@ namespace ComputerPlus
             list_unit.AddRow("NOOSE SWAT Team", "nooseSwat", EBackupUnitType.NooseTeam);
             list_unit.AddRow("Local Air Support Unit", "localAir", EBackupUnitType.AirUnit);
             list_unit.AddRow("NOOSE Air Support Unit", "nooseAir", EBackupUnitType.NooseAirUnit);
+            list_unit.AddRow("FIB Air Support Unit", "fbiAir", EBackupUnitType.FIBAirUnit);
             list_unit.SelectRow(0);
         }
 
@@ -122,8 +123,8 @@ namespace ComputerPlus
             list_unit.Clear();
             list_unit.AddRow("Local Patrol Unit", "localPatrol", EBackupUnitType.LocalUnit);
             list_unit.AddRow("State Patrol Unit", "statePatrol", EBackupUnitType.StateUnit);
-            list_unit.AddRow("Prisoner Transport Unit", "prisonerTransport", EBackupUnitType.PrisonerTransport);
             list_unit.SelectRow(0);
+
         }
     }
 }
